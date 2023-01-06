@@ -2,25 +2,97 @@
 <html>
   <head>
     <title>Title</title>
+
     <link rel="stylesheet" type="text/css" href="edw.css">
+    
+    <meta charset="utf-8">
+    <meta name="viewport" 
+          content="width=device-width,
+                   initial-scale=1,
+                   shrink-to-fit=no">
+            
+    <!-- Include Bootstrap for styling -->
+    <link rel="stylesheet"
+      href=
+    "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      
+    <!-- Include the Bootstrap Table CSS
+    for the table -->
+    <link rel="stylesheet" 
+          href=
+    "https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script>
-      function loadDocs(){
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState==4&&this.status==200) 
-        {
-          document.getElementById("div1").innerHTML= 
-          xhttp.responseText;	}};
-          xhttp.open("GET", "https://my.api.mockaroo.com/Students.json?key=d9e2a660", true);
-          xhttp.send();
-      }
-    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+
   </head>
   <body>
-    <h1>Title</h1>
-    <h3>Julia Mieszaniec<br/>Wiktoria Sadło<br/>Vladyslav Pnievski</h3>
-    <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
-    <button onclick="loadDocs()">Send an HTTP POST request to a page and get the result back</button>
+    
+    <script src=
+      "https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+
+    <script src=
+      "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+    </script>
+    <script src=
+      "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <!-- Include the JavaScript file
+    for Bootstrap table -->
+    <script src=
+      "https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js">
+    </script>
+    <script src="script.js"></script>
+    <div class="container">
+      <table class="table-striped border-success">
+        <thead>
+          <tr>
+            <th data-field="albumNumber">
+              <span class="text-success">
+                Employee ID
+              </span>
+            </th>
+            <th data-field="email">
+              <span class="text-success">
+                Employee Name 
+              </span>
+            </th>
+            <th data-field="first_name">
+              <span class="text-success">
+                Joining Date 
+              </span>
+            </th>
+            <th data-field="gender">
+              <span class="text-success">
+                Employee ID
+              </span>
+            </th>
+            <th data-field="age">
+              <span class="text-success">
+                Employee Name 
+              </span>
+            </th>
+            <th data-field="cityOfBirth">
+              <span class="text-success">
+                Joining Date 
+              </span>
+            </th>
+            <th data-field="last_name">
+              <span class="text-success">
+                Joining Date 
+              </span>
+            </th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+    <canvas id="secondChart" style="width:100%;max-width:600px"></canvas>
   </body>
 </html>
