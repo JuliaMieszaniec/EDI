@@ -3,8 +3,42 @@
   <head>
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="edw.css">
+    <script type="text/javasript" src="sript.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script type="text/javasript" src="test.js"></script>
+    <script type="text/javascript">
+      window.onload = function () {
+      
+      var chart = new CanvasJS.Chart("chartContainer", {
+        theme: "light1", // "light2", "dark1", "dark2"
+        animationEnabled: false, // change to true		
+        title:{
+          text: "Miesiąc pierwszego logowania"
+        },
+        data: [
+        {
+          // Change type to "bar", "area", "spline", "pie",etc.
+          type: "column",
+          dataPoints: [
+            { label: "styczeń",  y: 10  },
+            { label: "luty", y: 15  },
+            { label: "marzec", y: 5  },
+            { label: "kwiecień",  y: 7  },
+            { label: "maj",  y: 23 },
+            { label: "czerwiec",  y: 2  },
+            { label: "lipiec", y: 8  },
+            { label: "sierpień", y: 3  },
+            { label: "wrzesień",  y: 4  },
+            { label: "październik",  y: 3  },
+            { label: "listopad",  y: 5  },
+            { label: "grudzień", y: 15  }
+          ]
+        }
+        ]
+      });
+      chart.render();
+      
+      }
+    </script>
     <script>
       function loadDocs(){
         var xhttp = new XMLHttpRequest();
@@ -22,7 +56,7 @@
   <div id="container">
     <div id="title">
       <div id="gp">
-      <h1>Group Project</h1>
+      <h1>Group project</h1>
       </div>
       <div id="nazwiska">
       <h3>Julia Mieszaniec<br/>Wiktoria Sadło<br/>Vladyslav Pnievski</h3>
@@ -32,7 +66,9 @@
       <h1>Wykresy</h1>
     </div>
     <div class="content">
-      <h3>Tu będzie wykre</h3>
+      <h3>Tu będzie wykresy</h3>
+      <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+      <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
     </div>
     <div class="title"><h1>API</h1></div>
     <div class="content">
